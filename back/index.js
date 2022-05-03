@@ -121,8 +121,6 @@ app.get("/messages", async (req, res) => {
         return res.sendStatus(404);
     }
     res.send(messages.reverse());
-
-
 });
 
 app.post("/status", async (req, res) => {
@@ -160,15 +158,7 @@ function checkUsers() {
     promisse.catch(() => {
         console.log(chalk.bold.red("Error checking users"));
     });
-
 }
-
-
-
-
-
-
-
 
 app.listen(5000, () => {
     console.log(chalk.bold.green("Server is running on port 5000"));
